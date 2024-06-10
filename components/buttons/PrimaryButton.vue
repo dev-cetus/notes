@@ -13,7 +13,8 @@ const variants = {
 </script>
 
 <template>
-    <button class="rounded cursor-pointer text-white px-4 py-2 hover:ring-2 hover:ring-offset-2"
+    <button
+class="cursor-pointer rounded px-4 py-2 text-white hover:ring-2 hover:ring-offset-2"
         :class="variants[variant ?? 'blue']" :disabled="disabled ?? false">
         <slot />
     </button>

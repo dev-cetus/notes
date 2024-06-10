@@ -1,11 +1,12 @@
 <script setup lang="ts">
-const isOpen = defineModel()
+const isOpen = defineModel<boolean>()
 </script>
 
 <template>
-    <div v-show="isOpen"
-        class="z-50 fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black/30">
-        <div class="bg-white rounded p-4 w-screen md:w-1/3">
+    <div
+v-show="isOpen"
+        class="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-black/30">
+        <div class="w-screen rounded bg-white p-4 md:w-1/3">
             <slot />
         </div>
     </div>

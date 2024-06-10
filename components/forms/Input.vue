@@ -1,12 +1,17 @@
 <script setup lang="ts">
-defineProps<{
-    placeholder?: string
-}>()
+import { defineProps } from 'vue';
 
-const model = defineModel()
+defineProps<{
+    placeholder?: string;
+}>();
+
+const model = defineModel<string>();
 </script>
 
 <template>
-    <input v-model="model" :placeholder="placeholder"
-        class="border-slate-200 border-2 w-full text-lg bg-transparent p-2 focus:ring-2 rounded focus:ring-blue-500 outline-none" />
+    <input
+        v-model="model"
+        :placeholder="placeholder"
+        class="w-full rounded border-2 border-slate-200 bg-transparent p-2 text-lg outline-none focus:ring-2 focus:ring-blue-500"
+    >
 </template>

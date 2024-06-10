@@ -3,7 +3,7 @@ import type { Note } from "~/types";
 export const useNotes = () => {
     const notes = ref<Note[]>([]);
 
-    if (process.client) {
+    if (import.meta.client) {
         const storedNotes = localStorage.getItem('notes');
         if (storedNotes) {
             notes.value = JSON.parse(storedNotes);

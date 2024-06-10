@@ -3,10 +3,11 @@ defineProps<{
     placeholder?: string
 }>()
 
-const model = defineModel()
+const model = defineModel<string>()
 </script>
 
 <template>
-    <textarea v-model="model" :placeholder="placeholder"
-        class="w-full text-lg border-2 border-slate-200 bg-transparent p-2 focus:ring-2 rounded focus:ring-blue-500 outline-none"></textarea>
+    <textarea
+v-model="model" :placeholder="placeholder"
+        class="w-full rounded border-2 border-slate-200 bg-transparent p-2 text-lg outline-none focus:ring-2 focus:ring-blue-500"/>
 </template>
