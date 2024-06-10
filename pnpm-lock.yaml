@@ -33,18 +33,9 @@ importers:
         specifier: ^4.3.2
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
     devDependencies:
-      '@eslint/eslintrc':
-        specifier: github:eslint/eslintrc
-        version: https://codeload.github.com/eslint/eslintrc/tar.gz/903b8875581ee731fd1a9424f83f785359cfb22e
-      eslint:
-        specifier: ^9.2.0
-        version: 9.2.0
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.2.0)
       eslint-plugin-tailwindcss:
-        specifier: ^3.15.1
-        version: 3.15.1(tailwindcss@3.4.3)
+        specifier: ^3.17.3
+        version: 3.17.3(tailwindcss@3.4.3)
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
@@ -881,11 +872,6 @@ packages:
 
   '@eslint/eslintrc@3.0.2':
     resolution: {integrity: sha512-wV19ZEGEMAC1eHgrS7UQPqsdEiCIbTKTasEfcXAigzoXICcqZSjBZEHlZwNVvKg6UBCjSlos84XiLqsRJnIcIg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@eslint/eslintrc@https://codeload.github.com/eslint/eslintrc/tar.gz/903b8875581ee731fd1a9424f83f785359cfb22e':
-    resolution: {tarball: https://codeload.github.com/eslint/eslintrc/tar.gz/903b8875581ee731fd1a9424f83f785359cfb22e}
-    version: 3.0.2
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/js@9.2.0':
@@ -2677,12 +2663,6 @@ packages:
   eslint-config-flat-gitignore@0.1.5:
     resolution: {integrity: sha512-hEZLwuZjDBGDERA49c2q7vxc8sCGv8EdBp6PQYzGOMcHIgrfG9YOM6s/4jx24zhD+wnK9AI8mgN5RxSss5nClQ==}
 
-  eslint-config-prettier@9.1.0:
-    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-
   eslint-flat-config-utils@0.2.4:
     resolution: {integrity: sha512-k7MJkSIfF0bs5eQu1KXyV0AhsvdsqSt1pQfZNLwf6qkozuHQV6aNHg5f8+3Ya+WTzpB+e7I3hMhs4qBwx7nEkw==}
 
@@ -2701,9 +2681,9 @@ packages:
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
 
-  eslint-plugin-tailwindcss@3.15.1:
-    resolution: {integrity: sha512-4RXRMIaMG07C2TBEW1k0VM4+dDazz1kxcZhkK4zirvmHGZTA4jnlSO2kq5mamuSPi+Wo17dh2SlC8IyFBuCd7Q==}
-    engines: {node: '>=12.13.0'}
+  eslint-plugin-tailwindcss@3.17.3:
+    resolution: {integrity: sha512-DVMVVUFQ+lPraRSuUk2I41XMnusXT6b3WaQZYlUHduULnERaqe9sNfmpRY1IyxlzmKoQxSbZ8IHRhl9ePo8PeA==}
+    engines: {node: '>=18.12.0'}
     peerDependencies:
       tailwindcss: ^3.4.0
 
@@ -6485,20 +6465,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/eslintrc@https://codeload.github.com/eslint/eslintrc/tar.gz/903b8875581ee731fd1a9424f83f785359cfb22e':
-    dependencies:
-      ajv: 6.12.6
-      debug: 4.3.4
-      espree: 10.0.1
-      globals: 14.0.0
-      ignore: 5.3.1
-      import-fresh: 3.3.0
-      js-yaml: 4.1.0
-      minimatch: 3.1.2
-      strip-json-comments: 3.1.1
-    transitivePeerDependencies:
-      - supports-color
-
   '@eslint/js@9.2.0': {}
 
   '@fastify/busboy@2.1.1': {}
@@ -8860,10 +8826,6 @@ snapshots:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
 
-  eslint-config-prettier@9.1.0(eslint@9.2.0):
-    dependencies:
-      eslint: 9.2.0
-
   eslint-flat-config-utils@0.2.4:
     dependencies:
       '@types/eslint': 8.56.10
@@ -8907,7 +8869,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-tailwindcss@3.15.1(tailwindcss@3.4.3):
+  eslint-plugin-tailwindcss@3.17.3(tailwindcss@3.4.3):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.38
