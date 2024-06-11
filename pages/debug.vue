@@ -24,5 +24,8 @@ console.log(useNuxtApp())
                 Is offline ready: {{ $pwa?.offlineReady }}
             </li>
         </ul>
+        <PrimaryButton class="mt-2" @click="$pwa?.updateServiceWorker()">
+            Update
+        </PrimaryButton>
     </div>
 </template>
