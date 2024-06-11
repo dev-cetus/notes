@@ -86,7 +86,6 @@ fill="currentColor"
         <PlusButton @click="() => { isOpen = !isOpen }" />
         <ClientOnly>
             <div class="flex flex-col items-center gap-2 px-1 py-2">
-            {{ notes }}
                 <NoteItem v-for="note in notes" :key="note.id" :note="note" @remove="useRemoveNote(note)" />
             </div>
         </ClientOnly>
