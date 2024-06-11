@@ -1,7 +1,5 @@
 <script setup lang="ts">
 const { $pwa, _appConfig, versions } = useNuxtApp()
-
-console.log(useNuxtApp())
 </script>
 
 <template>
@@ -9,7 +7,7 @@ console.log(useNuxtApp())
         <h1 class="text-2xl font-bold">App infos</h1>
         <ul>
             <li>
-                Nuxt version: {{ versions.nuxt}}
+                Nuxt version: {{ versions.nuxt }}
             </li>
             <li>
                 Vue version: {{ versions.vue }}

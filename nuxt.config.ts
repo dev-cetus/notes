@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@vite-pwa/nuxt", "@nuxt/fonts", "@nuxt/eslint"],
 
+  ssr: false,
+
   fonts: {
     families: [
       { name: 'Space Grotesk', provider: 'google'}
