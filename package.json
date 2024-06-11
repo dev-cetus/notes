@@ -20,7 +20,10 @@
     "@vueuse/core": "^10.10.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "workbox-core": "^7.1.0",
+    "workbox-precaching": "^7.1.0",
+    "workbox-routing": "^7.1.0"
   },
   "devDependencies": {
     "eslint-plugin-tailwindcss": "^3.17.3",

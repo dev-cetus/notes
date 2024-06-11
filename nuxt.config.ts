@@ -11,7 +11,15 @@ export default defineNuxtConfig({
     ]
   },
 
+  nitro: {
+    prerender: {
+      routes: ['/', '/debug']
+    }
+  },
+
   pwa: {
+    srcDir: 'service-worker',
+    filename: 'sw.ts',
     manifest: {
       name: 'Notes',
       short_name: 'Notes',
@@ -36,5 +44,5 @@ export default defineNuxtConfig({
       path: '~/components',
       pathPrefix: false
     }
-  ]
+  ],
 })
