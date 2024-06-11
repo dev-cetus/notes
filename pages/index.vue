@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Note } from '~/types';
+import { useStorage } from '@vueuse/core';
 
 const isOpen = ref(false)
 const state = reactive({
@@ -7,17 +8,17 @@ const state = reactive({
     content: undefined
 })
 const isSpeechRecognitionWork = ref(true)
-const notes = computed(() => useNotes().getAll() )
+const notes = useStorage<Note[]>('notes', [])
 
 let recognition: Window["SpeechRecognition"] | null = null
 
 function useAddNote() {
     if (typeof state.title === 'string' && typeof state.content === 'string') {
-        const newNote: Note = {
+        notes.value.push({
+            id: Date.now(),
             title: state.title,
             content: state.content
-        }
-        useNotes().add(newNote)
+        })
         useCloseModal()
     }
 }
@@ -26,6 +27,10 @@ function useCloseModal() {
     isOpen.value = false
     state.title = undefined
     state.content = undefined
+}
+
+function useRemoveNote(note: Note) {
+    notes.value = notes.value.filter(n => n.id !== note.id)
 }
 
 function speak() {
@@ -40,7 +45,7 @@ onMounted(() => {
         recognition.continuous = false;
 
         // eslint-disable @typescript-eslint/no-explicit-any
-        recognition.onresult = (event) => {
+        recognition.onresult = (event: any) => {
             const transcript = event.results[0][0].transcript;
             state.content = transcript;
         };
@@ -81,7 +86,8 @@ fill="currentColor"
         <PlusButton @click="() => { isOpen = !isOpen }" />
         <ClientOnly>
             <div class="flex flex-col items-center gap-2 px-1 py-2">
-                <NoteItem v-for="note in notes" :key="note.title" :note="note" />
+            {{ notes }}
+                <NoteItem v-for="note in notes" :key="note.id" :note="note" @remove="useRemoveNote(note)" />
             </div>
         </ClientOnly>
     </div>
